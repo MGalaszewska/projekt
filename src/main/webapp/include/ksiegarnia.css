@@ -1,0 +1,39 @@
+@CHARSET "UTF-8";
+
+body {
+	background: #FFFFFF;
+	background-color: #6399C7;
+	background-image: url('http://www.stronastartowa.com/img/bg.gif');
+	background-attachment: fixed;
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+
+body {
+	color: White;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 20px;
+	cursor: default;
+	text-align: center;
+}
+
+h3 {
+	font-family: Helvetica;
+	font-size: xx-large;
+	font-weight: 900;
+}
+
+a:visited {
+	text-decoration: none;
+	color: Black
+}
+
+a:link {
+	text-decoration: none;
+	color: White;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: White;
+}
