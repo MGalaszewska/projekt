@@ -1,1 +1,1 @@
-<% response.sendRedirect(request.getContextPath() + "/api/books/add"); %>
+<% response.sendRedirect(request.getContextPath() + "/main"); %>
