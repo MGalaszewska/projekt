@@ -26,46 +26,15 @@
 					});
 </script>
 <script>
-	$(document)
-			.ready(
-					function() {
-						$("#delete")
-								.on(
-										'click',
-										function(e) {
-											e.preventDefault();
-											$
-													.ajax({
-														url : '${pageContext.request.contextPath}/api/reviews/delete/${reviewID}',
-														type : 'DELETE',
-														success : function() {
-															document.location
-																	.replace("${pageContext.request.contextPath}/main");
-														}
-													});
-										});
-					});
+function edit(id) {
+	window.location.href = "${pageContext.request.contextPath}/ReviewEdit/"+id;
+}
 </script>
+
 <script>
-	$(document)
-			.ready(
-					function() {
-						$("#addRev")
-								.on(
-										'click',
-										function(e) {
-											e.preventDefault();
-											$
-													.ajax({
-														url : '${pageContext.request.contextPath}/api/reviews/add/${reviewID}',
-														type : 'POST',
-														success : function() {
-															document.location
-																	.replace("${pageContext.request.contextPath}/main");
-														}
-													});
-										});
-					});
+function details(id) {
+	window.location.href = "${pageContext.request.contextPath}/ReviewDetails/"+id;
+}
 </script>
 
 </head>
@@ -84,9 +53,9 @@
 			<div id="text"></div>
 
 			<div class="form-group text-center">
-				<a href="${pageContext.request.contextPath}/ReviewEdit/${reviewID}"
+				<a href='javascript:edit(" + dane[i].id+ ")'
 					class="btn btn-primary" role="button">Edit</a> <a
-					href="${pageContext.request.contextPath}/ReviewRemove/${reviewID}"
+					href='javascript:remove(" + dane[i].id+ ")'
 					class="btn btn-primary" role="button">Delete</a> <a
 					href="${pageContext.request.contextPath}/main"
 					class="btn btn-default" role="button">Home page</a>

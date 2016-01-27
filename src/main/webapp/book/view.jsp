@@ -25,48 +25,6 @@
 								});
 					});
 </script>
-<script>
-	$(document)
-			.ready(
-					function() {
-						$("#delete")
-								.on(
-										'click',
-										function(e) {
-											e.preventDefault();
-											$
-													.ajax({
-														url : '${pageContext.request.contextPath}/api/books/delete/${bookID}',
-														type : 'DELETE',
-														success : function() {
-															document.location
-																	.replace("${pageContext.request.contextPath}/main");
-														}
-													});
-										});
-					});
-</script>
-<script>
-	$(document)
-			.ready(
-					function() {
-						$("#addRev")
-								.on(
-										'click',
-										function(e) {
-											e.preventDefault();
-											$
-													.ajax({
-														url : '${pageContext.request.contextPath}/api/reviews/add/${bookID}',
-														type : 'POST',
-														success : function() {
-															document.location
-																	.replace("${pageContext.request.contextPath}/main");
-														}
-													});
-										});
-					});
-</script>
 
 </head>
 

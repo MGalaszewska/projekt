@@ -7,6 +7,27 @@
 <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
 
 <script>
+	function edit(id) {
+		document.location.href = "${pageContext.request.contextPath}/BookEdit/"
+				+ id;
+	}
+</script>
+
+<script>
+	function remove(id) {
+		document.location.href = "${pageContext.request.contextPath}/BookRemove/"
+				+ id;
+	}
+</script>
+
+<script>
+	function details(id) {
+		document.location.href = "${pageContext.request.contextPath}/BookDetails/"
+				+ id;
+	}
+</script>
+
+<script>
 	$(document)
 			.ready(
 					function() {
@@ -26,15 +47,21 @@
 													+ "</td>");
 											td = $('<td/>');
 											td
-													.append("<a href='${pageContext.request.contextPath}/BookDetails/"+dane[i].id+"' class='btn btn-xs btn-warning' role='button'> Details </a> ");
+													.append("<a class='btn btn-xs btn-warning' role='button' href='javascript:details("
+															+ dane[i].id
+															+ ")'>Details</a>");
 											tr.append(td);
 											td = $('<td/>');
 											td
-													.append("<a href='${pageContext.request.contextPath}/BookEdit/"+dane[i].id+"' class='btn btn-xs btn-warning' role='button'> Edit </a> ");
+													.append("<a class='btn btn-xs btn-warning' role='button' href='javascript:edit("
+															+ dane[i].id
+															+ ")'>Edit</a>");
 											tr.append(td);
 											td = $('<td/>');
 											td
-													.append("<a href='${pageContext.request.contextPath}/BookRemove/"+dane[i].id+"' class='btn btn-xs btn-warning' role='button'> Remove </a> ");
+													.append("<a class='btn btn-xs btn-warning' role='button' href='javascript:remove("
+															+ dane[i].id
+															+ ")'>Delete</a>");
 											tr.append(td);
 											$(table).append(tr);
 										}
@@ -49,8 +76,8 @@
 		<div>
 			<h1>Books</h1>
 			<div>
-				<a href="${pageContext.request.contextPath}/AddBook">Add book</a> 
-				<a href="${pageContext.request.contextPath}/AddReview">Add review</a>
+				<a href="${pageContext.request.contextPath}/AddBook">Add book</a> <a
+					href="${pageContext.request.contextPath}/AddReview">Add review</a>
 			</div>
 			<br />
 
