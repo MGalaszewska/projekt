@@ -54,21 +54,19 @@
 		</dependencies>
 	</dependencyManagement>
 
-	<dependencies>
+<dependencies>
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-web-api</artifactId>
 			<version>6.0</version>
 			<scope>provided</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.9</version>
 			<scope>test</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>org.richfaces.ui</groupId>
 			<artifactId>richfaces-components-ui</artifactId>
@@ -77,19 +75,33 @@
 			<groupId>org.richfaces.core</groupId>
 			<artifactId>richfaces-core-impl</artifactId>
 		</dependency>
-		
 		<dependency>
-    <groupId>jstl</groupId>
-    <artifactId>jstl</artifactId>
-    <version>1.2</version>
-</dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-json</artifactId>
+			<version>1.8</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.sun.jersey.contribs</groupId>
+		    <artifactId>jersey-multipart</artifactId>
+		    <version>1.8</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.sun.jersey</groupId>
+		    <artifactId>jersey-server</artifactId>
+		    <version>1.10</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.sun.jersey</groupId>
+		    <artifactId>jersey-server-linking</artifactId>
+		    <version>1.10</version>
+		</dependency>
+	</dependencies>
 
 		<!-- ICEFaces <dependency> <groupId>org.icefaces</groupId> <artifactId>icefaces</artifactId> 
 			<version>2.0.0</version> <exclusions> <exclusion> <groupId>com.sun.faces</groupId> 
 			<artifactId>jsf-impl</artifactId> </exclusion> </exclusions> </dependency> 
 			<dependency> <groupId>org.icepush</groupId> <artifactId>icepush</artifactId> 
 			<version>2.0.0</version> </dependency> ICEFaces stuff -->
-	</dependencies>
 
 	<build>
 		<finalName>Ksiegarnia</finalName>
